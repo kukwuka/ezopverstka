@@ -1,0 +1,51 @@
+.Vacancytitle{
+	font-weight: 450;
+    font-size: 23pt;
+    transition:0.3s;
+}
+
+ .Vacancy{
+ 	width: 80%;
+ 	border: 2px solid #000;
+    border-radius: 2px;
+   
+    transition:0.3s;
+    padding: 20px 10%  20px 10%;
+    margin-bottom: 20px;
+ }
+
+ .Vacancycost{
+ 	
+    font-size: 14pt;
+   
+
+ }
+
+ .Vacancy:hover {
+    background: #000;
+    color: #fcac45; /* Увеличиваем масштаб */
+   }
+
+ .Vacancy:hover .Vacancytitle{
+   
+    color: #fcac45; /* Увеличиваем масштаб */
+   }
+
+
+@media screen and (max-width: 500px) { 
+    
+    
+    .Vacancycost{
+    
+    font-size: 12pt;
+    }
+
+    .Vacancytitle{
+    
+    font-size: 20pt;
+    
+    }
+
+    
+
+}

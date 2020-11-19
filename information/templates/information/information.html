@@ -1,0 +1,37 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}Информация{% endblock%}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'information/css/information.css' %}">
+<p class="bodytext">Наш адрес: 115201, Москва, Каширское шоссе, 22 корп. 3. 
+</p>
+<p class="bodytext">Связаться с нами можно по телефону (факсу) – &nbsp;(495) 727-08-36, (495) 604-42-55<b> </b>или по электронной почте: ezop@ezop.ru
+</p>
+<p class="bodytext"><b>Проезд:</b></p>
+<div id="map" style="width: 600px; height: 400px"></div>
+<p class="bodytext">Вариант 1: метро &quot;Каширская&quot;, последний вагон из центра, автобусы 164, 298, 275, троллейбус 71, одна остановка (&quot;Гостиница Онкологического центра&quot;), по подземному переходу через Каширское шоссе, далее по дорожке до проходной (НТЦ Электроэнергектики, 10-этажное здание). 
+</p>
+<p class="bodytext">Вариант 2: метро &quot;Каширская&quot;, первый вагон из центра, далее пешком вдоль Каширского шоссе в сторону центра&nbsp; (5-7 минут) до АЗС, с АЗС левее по дороге между автомойкой и магазином автозапчастей до проходной НТЦ Электроэнергектики. 
+</p>
+<p class="bodytext">Вариант 3: автотранспортом по Каширскому шоссе со стороны центра, не доезжая светофора свернуть к АЗС. Дальше – направо, к ближайшей проходной. 
+</p>
+<p class="bodytext">Мы расположены в офисе 905 на 9 этаже 10-этажного здания НТЦ Электроэнергектики.
+</p>
+<p class="bodytext">Остались вопросы? на самые популярные вопросы найдешь ответ на странице <a href="{% url 'question_answer' %}" class="question">Вопрос-ответ</a>
+</p>
+
+
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=1d81d010-9b6a-49e9-af0b-1d8f04abb668&lang=ru_RU" type="text/javascript"></script>
+<script src="{% static 'information/js/ymaps.js' %}" type="text/javascript"></script>
+
+
+
+   
+    
+
+{% endblock %} 

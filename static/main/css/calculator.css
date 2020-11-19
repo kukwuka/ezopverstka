@@ -1,0 +1,107 @@
+.blocks{
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%  ;
+}
+
+.orange{
+	background: #fcac45;
+}
+
+.block{
+	height: 300px;
+	position:relative;
+}
+
+.main_block{
+	text-align: center;
+}
+
+.block_title_main{
+	margin-top: 100px;
+	font-size: 40px;
+	font-weight: 400;
+}
+
+.block h3{
+	margin: 40px 0 0 25px  ;
+	text-align: left;
+	font-size: 30px;
+}
+
+.block p{
+	margin: 10px 10px 0 0 ;
+	text-align: right;
+	color: #999;
+}
+
+
+.block a{
+
+	position:absolute; /* добавили */
+	bottom:10%; /* добавили */
+	margin-left: 13%;
+	height: 40px;
+	width: 200px;
+	color: #000;
+	border : 3px solid #000;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	line-height: 40px;
+	 transition: .6s;
+	
+}
+.block a:hover{
+	color: #000;
+	background:#fcac45; 
+
+}
+
+.orange a:hover{
+	color: #fcac45;
+	background:#000; 
+
+}
+.orange p{
+	color: #fff;
+}
+
+@media screen and (max-width: 1010px) { 
+	.blocks{
+		grid-template-columns: auto;
+	}
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 500px) { 
+	
+	
+	main{
+		max-width: 100%;
+		width: 100%;
+		padding: 0;
+	}
+
+	.blocks{
+		grid-template-columns: 100%;
+	}
+
+	.block a{
+
+		
+		margin-left:  12%;
+		
+		
+	}
+	.block h3{
+
+	font-size: 20px;
+}
+
+}
+

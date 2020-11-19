@@ -1,0 +1,54 @@
+{% load news_tag %}
+{% get_FormDirection as form %}
+{% load static %}
+{% load recaptcha3 %}
+{% recaptcha_init %}
+{% recaptcha_ready action_name='homepage' %}
+	<link rel="stylesheet" href="{% static 'main/css/form.css' %}">
+		
+
+	<form  action="{% url 'contact' %}" method="POST" >
+		<div class="Formblock">
+			
+		{% csrf_token %}
+
+		<h4 class="Formtitle">Обратная связь</h4>
+		
+			
+		
+
+			<div class="blocks_form">
+				
+				<div class="block_form">
+					{{form.phone_number}}
+					{{form.email}}
+					{{form.name}}
+				</div>
+
+
+				<div class="block_form" >
+						{{form.comment}}
+						{{form.captcha}}
+						
+				</div>
+				
+			</div>
+			<span class="personal"> Нажимая на кнопку, вы даете <a href="personal_link">согласие на обработку своих персональных данных</a></span><br>
+			<button class="formbutton ">Отправить</button>
+		
+		
+		
+
+		
+
+
+		
+		</div>
+	</form>
+
+	
+
+			
+			
+
+			

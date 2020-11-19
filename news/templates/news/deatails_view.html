@@ -1,0 +1,14 @@
+{% extends 'main/index.html' %}
+{% block title %}Новости{% endblock%}
+
+
+
+{% block content %}
+
+			<h2 class="ArticleTitle" style="margin-bottom: 50px">
+				{{post.title}}
+			</h2>
+			<span class="ArticleText">{{post.post|safe }}</span>
+			<time class="Articledate">{{post.date }}</time>
+
+{% endblock %}

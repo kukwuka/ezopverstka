@@ -1,0 +1,69 @@
+{% extends 'main/index.html' %}
+<!--<form method="POST" >
+			
+			{% csrf_token %}
+			<div  class="features">
+			{{form.email}}
+			
+			<h4>Итого: </h4><h3 id="resultpage"></h3>
+
+			<span>{{eror}}</span>
+	   
+	   <button  type="submit" onclick="calculate()" > посчитать и оплатить</button>
+
+</div>
+	   </form> -->
+
+{% load static %}
+{% load news_tag %}
+
+
+
+
+
+<!-- BODY -->
+{% block content %}
+<div id="content">
+        
+        <div id="contenttitle"><h1>Проектирование</h1></div>
+
+        <div id="maincontent">
+	<!--  CONTENT ELEMENT, uid:69/textpic [begin] -->
+		<div id="c69" class="csc-default">
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-intext-right"><div class="csc-textpic-imagewrap"><div class="csc-textpic-image csc-textpic-last"><a href="typo3temp/pics/5d39f914b4.jpg"   rel="lightbox[lb69]"><img src="{% static 'main/img/81ed2342ce.jpg' %}" width="200" height="150" border="0"  alt=""></a></div></div><div class="csc-textpic-text">
+		<!--  Text: [begin] -->
+			<p class="bodytext">&nbsp;Компания ООО «ЭЗОП» уже боле 20 лет занимает лидирующее место на рынке разработки специальных разделов проектов в части заземляющих устройств, систем молниезащиты и обеспечения электромагнитной совместимости микропроцессорной аппаратуры. Опыт выполнения работ на более чем 500 объектах электроэнергетики, нефтегазовой отрасли, объектах связи, промышленных объектах позволяет эффективно разработать низко затратные проекты систем заземления, молниезащиты, и рекомендаций по обеспечению электромагнитной совместимости, что подтверждается отзывами наших Заказчиков. Наши проекты разрабатываются с учетом требований Заказчика, и с учетом требований современной НТД (<i>СТО-56947007-29.240.044-2010, СТО-56947007-29.240.043-2010, СТО-56947007-29.130.15.114-2012</i>) по соответствующей отрасли.<br /><br />В тех случаях, когда речь идет о модернизации существующих объектов, специалисты компании ЭЗОП готовы провести всестороннее <a href="index.php?id=24" title="Opens internal link in current window" class="internal-link" >предпроектное обследование объектов</a> с использованием новейших технологий.</p>
+		<!--  Text: [end] -->
+			</div></div>
+		<!--  Image block: [end] -->
+			</div>
+	<!--  CONTENT ELEMENT, uid:69/textpic [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:80/textpic [begin] -->
+		<div id="c80" class="csc-default">
+		<!--  Image block: [begin] -->
+			<div class="csc-textpic csc-textpic-intext-left csc-textpic-equalheight"><div class="csc-textpic-imagewrap"><div class="csc-textpic-image csc-textpic-last"><a href="typo3temp/pics/7f1549ec22.jpg"   rel="lightbox[lb80]"><img src="{% static 'main/img/208dafd880.jpg' %}" width="316" height="200" border="0"  alt=""></a></div></div><div class="csc-textpic-text">
+		<!--  Text: [begin] -->
+			<p class="bodytext">Мы готовы выполнить также анализ состояния систем молниезащиты и заземления, а также оценку электромагнитной обстановки на уже вводимом в эксплуатацию объекте. По результатам работ выдается паспорт заземляющего устройства (<i>согласно РД 153-34.0-20.525-00 и СТО 56947007-29.130.15.105-2011</i>), исполнительная схема молниезащиты, отчёт по оценке электромагнитной обстановке на объекте (<i>согласно СО 34.35.311-2004, СТО-56947007-29.240.044-2010, СТО-56947007-29.240.043-2010</i>).<br /><br />Успешность прохождения итогового контроля определяется тем, насколько тщательно проработаны вопросы заземления ЭМС на стадии проекта. Грамотное решение вопросов заземления и ЭМС в проекте – не только залог надежной и безопасной работы объекта, но и эффективный способ снижения затрат на строительство и эксплуатацию, поскольку позволяет заранее заложить оптимальные решения, не требующие последующей доделки и корректировки. </p>
+		<!--  Text: [end] -->
+			</div></div>
+		<!--  Image block: [end] -->
+			</div>
+	<!--  CONTENT ELEMENT, uid:80/textpic [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:79/text [begin] -->
+		<div id="c79" class="csc-default"></div>
+	<!--  CONTENT ELEMENT, uid:79/text [end] -->
+		
+	<!--  CONTENT ELEMENT, uid:81/text [begin] -->
+		<div id="c81" class="csc-default">
+		<!--  Text: [begin] -->
+			<p class="bodytext">По всем перечисленным вопросам Вы можете связаться с нами по тел. <b>(495)727-08-36, (495) 604-42-55, (499) 613-33-18</b> или отправить запрос через электронную форму.</p>
+		<!--  Text: [end] -->
+			</div>
+<link rel="stylesheet" href="{% static 'main/css/design.css' %}">
+
+{% include 'include/FormDirection.html' %}
+
+{% endblock %}

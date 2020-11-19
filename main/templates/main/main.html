@@ -1,0 +1,144 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% load news_tag %}
+
+{% block title %}Главная страница{% endblock%}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'main/css/calculator.css' %}">
+	
+			
+			<!--<div class="block">
+					
+				<div class="directions whitedr">
+					<img src="{% static 'main/img/compas.png' %}" class="logdir">
+					<h3>Проектирование</h3>
+					<h5 class="desription">Проектирование ЗУ,<br>
+
+						подготовка специальных разделов<br> 
+						проектной документации </h5>
+					
+					<a href="{% url 'design' %}"><div class="arrow greenarrow"><img src="{% static 'main/img/arrow.png' %}"></div></a>
+				</div>
+
+
+				<div class="directions greendr">
+					<img src="{% static 'main/img/search.png' %}" class="logdir">
+					<h3>Диагностика</h3><h5 class="desription" >Диагностика проблем<br> электромагнитной совместимости, заземления,<br> молниезащиты</h5>
+					<a href="{% url 'diagnostics' %}"><div class="arrow whitearrow"><img src="{% static 'main/img/arrow.png' %}"></div></a>
+
+
+				</div>
+				
+				<div class="directions whitedr">
+					<h3 class="maindir">Направления ЭЗОП </h3>
+				</div>
+
+
+
+				<div class="directions greendr">
+					<img src="{% static 'main/img/voltage.png' %}" class="logdir">
+					<h3>Техника высоких напряжений</h3><h5 class="desription" >Координация изоляции, выбор ОПН,<br> расчет перенапряжений</h5>
+					<a href="{% url 'HVT' %}"><div class="arrow whitearrow"><img src="{% static 'main/img/arrow.png' %}"></div></a>
+				</div>
+				
+				
+				
+				<div class="directions whitedr">
+					<img src="{% static 'main/img/hammer.png' %}" class="logdir">
+					<h3>Монтаж и ремонт</h3><h5 class="desription" >Выполнение систем защемления <br>и
+							молниезащиты </h5>
+					<a href="{% url 'Installation_and_repair' %}"><div class="arrow greenarrow"><img src="{% static 'main/img/arrow.png' %}"></div></a>
+				</div>
+
+
+
+				<div class="directions greendr">
+					<img src="{% static 'main/img/hooks.png' %}" class="logdir">
+					<h3>Разработка ПО</h3><h5 class="desription" >Разработка и поставка <br>индивидуального ПО</h5>
+					<a href="{% url 'development' %}"><div class="arrow whitearrow"><img src="{% static 'main/img/arrow.png' %}"></div></a>
+
+				</div>
+				
+			</div>
+
+
+			{% get_FormDirection as form %}
+		
+		
+
+			<form method="POST" >
+			
+			{% csrf_token %}
+			<div  class="features">
+			{{form.name}}
+			{{form.email}}
+			{{form.phone_number}}
+			{{form.Date}}
+			{{form.comment}}
+	
+
+			
+			
+
+			
+			</div>-->
+		
+<div class="blocks">
+
+
+	<div class="block orange main_block">
+		<h2 class="block_title_main">Направления ЭЗОП </h2>
+		<p class="block_description"></p>
+		
+
+	</div>
+
+	<div class="block">
+		<h3 class="block_title">Диагностика</h3>
+		<p class="block_description">Диагностика проблем электромагнитной совместимости, заземления,молниезащиты</p>
+		<a href="{% url 'diagnostics' %}" class="">Подробнее</a>
+
+	</div>
+
+	<div class="block orange">
+		<h3 class="block_title">Проектирование</h3>
+		<p class="block_description">Проектирование ЗУ, подготовка специальных разделов проектной документации</p>
+		<a href="{% url 'design' %}" class="">Подробнее</a>
+
+	</div>
+
+
+	<div class="block">
+		<h3 class="block_title">Разработка ПО</h3>
+		<p class="block_description">Разработка и поставка индивидуального ПО</p>
+		<a href="{% url 'development' %}" class="">Подробнее</a>
+
+	</div>
+
+
+	<div class="block orange">
+		<h3 class="block_title">Монтаж и ремонт</h3>
+		<p class="block_description">Выполнение систем защемления и молниезащиты</p>
+		<a href="{% url 'Installation_and_repair' %}" class="">Подробнее</a>
+
+	</div>
+
+
+	<div class="block">
+		<h3 class="block_title">Техника высоких напряжений</h3>
+		<p class="block_description">Координация изоляции, выбор ОПН,расчет перенапряжений</p>
+		<a href="{% url 'HVT' %}" class="">Подробнее</a>
+
+	</div>
+
+
+</div>
+
+			
+
+			
+	
+
+{% endblock %}

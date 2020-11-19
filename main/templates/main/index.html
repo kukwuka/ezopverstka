@@ -1,0 +1,175 @@
+{% load static %}
+{% load news_tag %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	{% block style %}{% endblock %}
+	
+	<link rel="stylesheet" href="{% static 'main/css/secondmain.css' %}">	
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<!--<div class="top">
+		-->
+
+		
+			<a href="{% url 'home' %}" class="logo" ><img src="{% static 'main/img/logowhite.svg' %}" class="logo_img" ></a>
+				
+			
+				<nav>
+					<div class="topnav" id="myTopnav">
+						<a href="{% url 'home' %}">Главная</a>
+						<a href="{% url 'about' %}">О компании</a>
+						<a href="{% url 'news' %}">Новости</a>
+						<a href="{% url 'information' %}">Информация</a>
+						
+						<a href="{% url 'vacancies' %}">Вакансии</a>
+						<a href="#" id="menu" class="icon">&#9776</a>
+					</div>
+
+				</nav>
+		</header>
+
+
+
+
+				<div class="main_welcome">
+					
+					<h1>Электроэнергетика<br><span class="defend"> Защита От Помех</span></h1>
+				</div>
+
+				<div class="services_cards">
+					<div class="service_card">
+						<h4>Грозовая активность</h4>
+						<p>Воспользоваться картой грозовой активности России</p>
+						<a href="{% url 'groza' %}" class="butt">воспользоваться</a>
+					</div>
+
+
+					<div class="service_card">
+						<h4>Грозовое поле</h4>
+						<p>Автоматический расчет грозового поля</p>
+						<a href="#" class="butt">воспользоваться</a>
+
+					</div>
+
+				</div>
+
+
+				
+
+
+
+				
+		
+
+		<!--</div>
+		<h1 class="electro">Электроэнергетика,<br>Защита От Помех</h1>
+		
+				<div class="service">
+				<h3 class="servicename">Грозовая активность</h3>
+				<h5 class="desription servicedescription">Воспользоваться картой грозовой активности России</h5>
+				<a href="{% url 'groza' %}" class="linservice"><div >
+					<button class="servicearrow ">Смотреть</button>
+				</div></a></div>
+
+				<div class="service second">
+				<h3 class="servicename">Грозовая активность</h3>
+				<h5 class="desription servicedescription">Воспользоваться картой грозовой активности России</h5>
+				<a href="#" class="linservice"><div >
+					<button class="servicearrow ">Смотреть</button>
+				</div></a>
+
+
+		</div>-->
+
+		
+	
+
+
+	
+	
+		{% get_Novelty as news %}
+		{% if news %}
+		<div class="news_title">
+			<a href="{% url 'news' %}" class="Nevelty_welcome">Новости</a>
+		</div>
+		<div class="news">
+			
+			
+			
+
+			
+			{% for Novelty in news %}
+				<div class="Novelty">
+					<a href="{% url 'news_detail' Novelty.id %}">
+						<p class="Neveltytitle">
+							{{Novelty.title|truncatechars:149 }}
+						</p>
+					</a>
+						
+			
+				 </div>
+
+
+			
+			{% endfor %}
+
+			
+		</div>
+		{% endif  %}
+	<main>
+		<div class ="maincontainer">
+		
+			{% block content %}
+			{% endblock %}
+		</div>	
+	
+	</main>
+
+
+	<footer>
+
+		<div class="namemail">
+			<span>© "ЭЗОП" 2005 г.</span>
+			
+			<div class="mail"><a href="mailto:ezop1992@mail.ru"> ezop1992@mail.ru</a></div>
+
+		</div>
+
+		<div class="urls">
+			<div class="columnuurl">
+
+			<a href="{% url 'home' %}" class="urlelement">Главная</a><br>
+			<a href="{% url 'news' %}" class="urlelement">Новости</a>
+			</div>
+			<div class="columnuurl">
+			<a href="{% url 'information' %}" class="urlelement">Информация</a><br>
+			<a href="{% url 'about' %}" class="urlelement" >О компании</a>
+			</div>
+			<div class="columnuurl">
+			<a href="{% url 'vacancies' %}" class="urlelement" >Вакансии</a><br>
+			<a href="{% url 'question_answer' %}" class="urlelement" >Вопрос&#8209;pответ</a>
+			</div>
+		</div>
+		<div class="blocknumbers">
+			
+			<div class="numbers">
+				
+				
+					<a class="number" href="callto:+7 (495) 727-08-36">+7 (495) 727-08-36</a><br>
+					<a class="number" href="callto:+7 (495) 727-08-36<">+7 (495) 727-08-36</a>
+				
+			</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" src={% static "main/css/menu.js"  %}></script>
+</body>
+</html>

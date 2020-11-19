@@ -1,0 +1,33 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}Вопрос-ответ{% endblock%}
+
+{% block style %}
+<head>
+	
+</head>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'main/css/question_answer.css' %}">
+	{% for el in questions_answers %}
+		<div class="questionBlock">
+			<span class="question">
+				{{el.question}}				
+			</span>
+
+			<div class="answer">
+				{{el.answer|safe}}				
+			</div>
+
+
+
+
+		</div>
+	{% endfor %}
+		<div class="newspagination"> 
+					{% include 'include/pagination.html' %}		
+		</div>
+	
+{% endblock %}

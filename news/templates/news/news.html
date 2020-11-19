@@ -1,0 +1,72 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}Новости{% endblock%}
+
+
+
+{% block content %}
+	<link rel="stylesheet" href="{% static 'news/css/newslist.css' %}">
+		<!--<div class="newslist">
+			<div class="postcolumn rightcloumn">
+				{% for news in Novelty|slice:6 %}
+					<div class="newselement">
+
+
+					
+						<a href="{% url 'news_detail' news.id %}"><h2 class="Postltytitle">
+						
+						{{news.title }}</h2></a>
+						<time class="PostDate">{{news.date }}</time>
+				
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="postcolumn">	
+				{% for news in Novelty|slice:"6:12" %}
+					
+
+
+					<div class="newselement">
+						<a href="{% url 'news_detail' news.id %}"><h2 class="Postltytitle">
+						{{news.id }}{{news.title }}</h2></a>
+						<time class="PostDate">{{news.date }}</time>
+				
+					</div>
+
+
+				
+				{% endfor %}
+			</div>
+	</div>
+				<div class="newspagination"> 
+					{% include 'include/pagination.html' %}		
+				</div>-->
+
+
+
+	<div class="list_news">
+		
+		{% for news in Novelty|slice:6 %}
+			
+				<div class="new_inline">
+					<a href="{% url 'news_detail' news.id %}">
+						
+							{{news.title }}
+						
+					</a>
+					<br>
+
+					
+						{{news.date }}
+					
+				
+				</div>
+			
+		{% endfor %}
+
+
+	</div>
+
+{% endblock %}

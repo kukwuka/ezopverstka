@@ -1,0 +1,38 @@
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'groza/groza.css' %}">
+    <title>Грозовая Активность</title>
+</head>
+
+<body>
+
+
+	Широта
+	<input  type="number" name="xline" id="xline" >
+	Долгота
+	<input  type="number" name="yline" id="yline">
+	<button onclick="drawpoint()">Показать</button>
+    <a href="{% url 'home' %}">Домой</a>
+	<div>
+	<canvas id="canvas" width="1154" height="609" class="firstcanvas"></canvas>
+	<canvas id="secondcanvas" width="1154" height="609" class="secondcanvas"></canvas>
+	</div>
+	
+	<script type="text/javascript" src={% static "groza/groza.js"  %}></script>
+
+
+</body>
+				
+		
+
+
+
+
+
+
+	
+	

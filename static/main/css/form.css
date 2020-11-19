@@ -1,0 +1,122 @@
+
+.form_comment{
+	resize: none;
+}
+
+.Formblock{
+	background: #fff;
+	width:  80%;
+	overflow:hidden;
+	border: 3px solid #fcac45;
+	padding: 50px 5% 50px 5%;
+	margin-top: 30px;
+	
+}
+
+
+.Formtitle{
+	text-align: center;
+	padding-bottom: 20px;
+	font-size: 30px;
+}
+
+
+
+.blocks_form{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%  ;	
+}
+
+.form_input{
+	width: 85%;
+	padding:2%;
+	margin: 10px 0 10px 0;
+	height: 32px;
+	border: 3px solid #fcac45;
+}
+.form_comment{
+	margin-top: 10px;
+	width: 85%;
+	height: 188px;
+	padding: 2%;
+	border: 3px solid #fcac45;
+} 
+
+.formbutton{
+	margin-top: 40px;
+	text-align: center;
+	width: 30%;
+	height:50px;
+	margin-left: 33%;
+	border: 3px solid #000;
+	background: #fcac45;
+	font-size: 35px;
+	font-family: auto;
+    font-style: normal;
+    font-weight: lighter;
+    transition: 0.5s;
+}
+
+.formbutton:hover{
+	background: #000;
+	color: #fcac45;
+}
+
+@media screen and (max-width: 1010px) { 
+	.blocks_form{
+		grid-template-columns: auto;
+	}
+}
+/*
+
+.formelement{
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: 46%; 
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.Formtitle{
+	margin: 0;
+}
+
+
+.form_comment{
+
+		border: none;
+		width: 50%;
+		margin-right:  25px;
+		float: right;
+		box-sizing: border-box;
+		height:140px;
+		
+		margin-top: 10px;
+		margin-bottom:  10px;
+}
+
+.formbutton{
+	background: black;
+	color: white;
+	margin-left: 25%;
+	font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28pt;
+    text-align: center;
+    line-height : 40px;
+
+}
+
+
+.personal{
+	font-size: 10pt;
+	padding: 5px;
+	margin-top: 5px;
+	color :#aba59e;
+}
+
+

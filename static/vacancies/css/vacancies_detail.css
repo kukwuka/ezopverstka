@@ -1,0 +1,13 @@
+.Vacancytitle{
+	
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30pt;
+    transition:0.1s;
+    margin-top: 30px;
+}
+
+.Vacancycost{
+ 	
+    font-size: 18pt;
+ }

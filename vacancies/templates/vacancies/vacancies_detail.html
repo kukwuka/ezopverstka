@@ -1,0 +1,23 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}{{vacancy.name }}{% endblock%}
+
+
+
+{% block content %}
+	
+	<link rel="stylesheet" href="{% static 'vacancies/css/vacancies_detail.css' %}">
+			<div class="vacancy">
+				<span class="Vacancytitle">
+					{{vacancy.name }}
+				</span>
+				<span class="VacancyText">{{vacancy.description|safe }}</span>
+				<span class="Vacancycost">з/п: {{vacancy.cost }}</span><br>
+				<span>Рассматривание резюме происходить ТОЛЬКО черз почту , по адресу : <a href="mailto:ezop1992@mail.ru">ezop@ezop.ru</a> . В теме письма указать <Резюме:"Название должности".>
+					Резюме должен сожержать контактные данные.
+			  </span>
+
+
+			</div>
+			
+{% endblock %}

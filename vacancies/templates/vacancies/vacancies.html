@@ -1,0 +1,30 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}Вакансии{% endblock%}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'vacancies/css/vacancies.css' %}">
+	{% for  vacancy in Vacancies %}
+				<a href="{% url 'vacancies_detail' vacancy.id %}">
+					<div class="Vacancy">
+
+
+				
+						<h2 class="Vacancytitle">{{vacancy.name }}</h2> 
+						<span class="Vacancycost" >з/п: {{vacancy.cost }}</span>
+					
+			
+					</div>
+				</a>
+
+			
+			{% endfor %}
+			<div class="newspagination"> 
+				{% include 'include/pagination.html' %}		
+			</div>
+
+
+
+{% endblock %}
